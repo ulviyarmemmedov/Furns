@@ -1,0 +1,81 @@
+﻿@using Entities
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section css{
+    <link rel="stylesheet" href="~/Front/css/contact.css" />
+}
+@model CustomerReview
+<div class="one">
+    <div class="container">
+        <div class="row all">
+            <div class="col-md-6 left"><h2>Contact</h2></div>
+            <div class="col-md-6 right">
+                <a href="/">HOME</a>  /
+                CONTACT US
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlee">
+    <div class="container">
+        <div class="row all">
+            <div class="col-md-4 left">
+                <div class="alll">
+                    <h1>Contect Info</h1>
+                    <div class="par">
+                        <h6>Phone:</h6>
+                        <p>
+                            +012 345 678 102
+                            <br>
+                            +012 345 678 102
+                        </p>
+                    </div>
+                    <div class="par">
+                        <h6>Email:</h6>
+                        <p>
+                            urname@email.com
+                            <br>
+                            urwebsitenaem.com
+                        </p>
+                    </div>
+                    <div class="par">
+                        <h6>Address:</h6>
+                        <p>
+                            Address goes here,
+                            <br>
+                            street, Crossroad 123.
+                        </p>
+                    </div>
+                    <h4>Follow Us</h4>
+                    <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="">  <i class="fa-brands fa-twitter"></i></a>
+                    <a href=""> <i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+            </div>
+            <div class="col-md-8 right">
+
+                <h1>Get In Touch</h1>
+                <form asp-action="contact" method="post">
+                    <input type="text" asp-for="Name" id="name" class="first" placeholder="Name">
+                    <input type="email" asp-for="Email" class="first" placeholder="Email">
+                    <input type="text" asp-for="Subject" class="area" placeholder="Subject">
+                    <input type="text" asp-for="Message" id="" class="area" placeholder="Your Message" style="padding: 30px;">
+                    <input type="submit" value="Send" class="btnnn send" >
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+     <script src="~/Front/js/succes.js"></script>
+}

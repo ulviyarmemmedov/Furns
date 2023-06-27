@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.first {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.first .all {
+  margin: 0 auto;
+  width: 50%;
+  padding: 80px 60px;
+  box-shadow: 0 19px 38px rgba(235, 42, 42, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.first .all h1 {
+  text-align: center;
+}
+.first .all form {
+  width: 100%;
+}
+.first .all form input {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 10px 0;
+  outline: none;
+}
+.first .all form .submit {
+  width: 33%;
+  color: white;
+  background-color: green;
+  border: none;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+.first .all form .submit:hover {
+  background-color: rgb(0, 180, 0);
+}
+.first .all form a {
+  padding: 11px 40px;
+  border: none;
+  margin-left: 8px;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.first .all form .list {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+}
+.first .all form .list:hover {
+  background-color: rgb(55, 55, 248);
+}
+.first .all form .back {
+  background-color: red;
+  color: white;
+  text-decoration: none;
+}
+.first .all form .back:hover {
+  background-color: rgb(255, 68, 68);
+}/*# sourceMappingURL=css.css.map */

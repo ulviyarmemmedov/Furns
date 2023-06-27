@@ -1,0 +1,45 @@
+﻿@using furns.viewmodel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section css{
+    <link rel="stylesheet" href="~/Front/css/detaling.css" />
+}
+@model SingleVM 
+<div class="one">
+    <div class="container">
+        <div class="row all">
+            <div class="col-md-6 left"><h2>DETAL</h2></div>
+            <div class="col-md-6 right">
+                <a href="@Url.Action("Index","home")">HOME</a>  /
+                <a href="@Url.Action("shop","product")">SHOP</a>/
+                Shop Detail
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="middlee">
+    <div class="container">
+        <div class="row all">
+            <div class="col-md-6 right">
+                <img src="@Model.Newss.Picture" alt="">
+            </div>
+            <div class="col-md-6 left">
+                <h2>@Model.Newss.Header</h2>
+                <h3>@Model.Newss.Time.ToString(" dd MMMM ")</h3>
+                <p>@Model.Newss.Description</p>
+              
+                <div class="line"></div>
+                <ul>
+                    <li>Security Policy (Edit With Customer Reassurance Module)</li>
+                    <li>Delivery Policy (Edit With Customer Reassurance Module)</li>
+                    <li>Return Policy (Edit With Customer Reassurance Module)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

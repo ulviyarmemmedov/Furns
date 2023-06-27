@@ -1,0 +1,27 @@
+﻿@using furns.viewmodel
+
+@model LoginVM;
+
+@section css{
+    <link rel="stylesheet" href="~/Front/css/scss.css" />
+    <link rel="stylesheet" href="~/Front/css/login.css" />
+}
+
+ <div class="login">
+        <div class="container">
+             <div class="bir">
+              <h1>Login</h1>
+              <form asp-action="login" method="post">
+
+                  <label for="us">FullName</label>
+                  <input type="text"  asp-for="FullName" id="us"><br>
+                  <label for="qiymet">Password</label>
+                  <input type="password"  asp-for="Password" id="qiymet"><br>
+
+                  <input type="submit" value="Login" class="submit">
+                  <a href="@Url.Action("regis","auth")" class="list">Registration</a>
+
+               </form>
+             </div>
+        </div>
+  </div>  

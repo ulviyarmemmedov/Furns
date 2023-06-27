@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 0rem !important;
+}
+
+.header {
+  background-color: black;
+}
+.header .top {
+  display: flex;
+  align-items: center;
+  padding: 11px 0;
+}
+.header .top .left p {
+  color: #FF7004;
+  margin: 0;
+}
+.header .top .right {
+  display: flex;
+  justify-content: right;
+  /* Change color of dropdown links on hover */
+  /* Show the dropdown menu on hover */
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+}
+.header .top .right .dropbtn {
+  background-color: black;
+  font-size: 16px;
+  border: none;
+  color: wheat;
+  padding-right: 11px;
+  transition: 0.4s;
+  z-index: 88455454;
+}
+.header .top .right .first {
+  border-right: 1px solid wheat;
+}
+.header .top .right .dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+.header .top .right .dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.header .top .right .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 68678;
+}
+.header .top .right .dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 32543;
+}
+.header .top .right .dropdown:hover .dropbtn {
+  color: #FF7004;
+}
+
+.header2 .middle {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+}
+.header2 .middle .right {
+  display: flex;
+  justify-content: right;
+}
+.header2 .middle .right i {
+  margin: 0 20px;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+.header2 .middle .right i:hover {
+  color: #FF7004;
+  cursor: pointer;
+}
+.header2 .middle .right .line {
+  width: 2px;
+  height: 27px;
+  border: 1px solid #474747;
+}
+.header2 .middle .right .shop {
+  position: relative;
+}
+.header2 .middle .right .shop p {
+  position: absolute;
+  left: 34px;
+  top: 0;
+  background-color: #FF7004;
+  padding: 0 6px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: white;
+}
+
+.header3 {
+  background-color: black;
+}
+.header3 .bottom .colll {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+.header3 .bottom .colll a {
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 0 10px;
+  color: white;
+  transition: 0.4s;
+}
+.header3 .bottom .colll a:hover {
+  color: #FF7004;
+}
+
+.telhd {
+  display: none;
+}
+.telhd .tel {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+}
+.telhd .tel .right {
+  display: flex;
+  justify-content: right;
+}
+.telhd .tel .right i {
+  margin: 0 20px;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+.telhd .tel .right i:hover {
+  color: #FF7004;
+  cursor: pointer;
+}
+.telhd .tel .right .line {
+  width: 2px;
+  height: 27px;
+  border: 1px solid #474747;
+}
+.telhd .tel .right .shop {
+  position: relative;
+}
+.telhd .tel .right .shop p {
+  position: absolute;
+  left: 34px;
+  top: 0;
+  background-color: #FF7004;
+  padding: 0 6px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: white;
+}
+
+.one {
+  padding: 5rem 0;
+  background-color: #F4F5F7;
+}
+.one .all .right {
+  text-align: right;
+}
+.one .all .right a {
+  transition: 0.4s;
+}
+.one .all .right a:hover {
+  color: #FF7004;
+}
+
+.middlee {
+  padding: 5rem 0;
+}
+.middlee .all {
+  display: flex;
+  justify-content: space-between;
+}
+.middlee .all .left .alll {
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  width: 99%;
+}
+.middlee .all .left .alll h1 {
+  margin-bottom: 30px;
+}
+.middlee .all .left .alll .par {
+  display: flex;
+  justify-content: space-between;
+}
+.middlee .all .left .alll h4 {
+  margin-bottom: 20px;
+}
+.middlee .all .left .alll a i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: black;
+  transition: 0.4s;
+}
+.middlee .all .left .alll a:hover i {
+  color: #FF7004;
+}
+.middlee .all .right {
+  padding: 3rem 2rem 1rem 2rem;
+  background-color: #f5f5f5;
+}
+.middlee .all .right form .first {
+  outline: none;
+  width: 49%;
+  padding: 10px 0 10px 10px;
+}
+.middlee .all .right form .first:nth-child(1) {
+  margin-right: 9px;
+}
+.middlee .all .right form .area {
+  outline: none;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0 10px 10px;
+}
+.middlee .all .right form .btnnn {
+  margin-top: 40px;
+  padding: 15px 50px;
+  color: white;
+  background-color: #FF7004;
+  border: none;
+  transition: 0.4s;
+}
+.middlee .all .right form .btnnn:hover {
+  background-color: #eca065;
+}
+
+.first-last {
+  background-color: #212529;
+  padding: 6rem 0;
+  color: white;
+}
+.first-last .all .left i {
+  font-size: 1rem;
+  padding: 5px 5px;
+  transition: 0.4s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.first-last .all .left i:hover {
+  background-color: #FF7004;
+}
+.first-last .all .middle ul li {
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.6s;
+}
+.first-last .all .middle ul li a {
+  color: white;
+  transition: 0.7s;
+}
+.first-last .all .middle ul li a:hover {
+  text-decoration: none;
+  color: #FF7004;
+}
+.first-last .all .middle ul li:hover {
+  transform: translate(20px);
+}
+.first-last .all .right .email {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #007A58;
+  outline: none;
+  transition: 0.2s;
+}
+.first-last .all .right .email:focus {
+  border: 1px solid #FF7004;
+}
+.first-last .all .right .btnn {
+  margin-top: 20px;
+  padding: 15px 35px;
+  background-color: #FF7004;
+  color: white;
+  border: none;
+  transition: 0.4s;
+}
+.first-last .all .right .btnn:hover {
+  background-color: #ff9341;
+}
+
+.last {
+  padding: 20px 0;
+  background-color: #2A2A2A;
+}
+.last .all .left p {
+  color: white;
+  margin: 0;
+}
+.last .all .left p i {
+  color: red;
+}
+.last .all .left p a {
+  color: white;
+  transition: 0.4s;
+}
+.last .all .left p a:hover {
+  text-decoration: none;
+  color: #FF7004;
+}
+.last .all .right {
+  text-align: right;
+}/*# sourceMappingURL=contact.css.map */

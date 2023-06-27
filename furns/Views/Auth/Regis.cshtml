@@ -1,0 +1,32 @@
+﻿@using Entities
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Fuser
+@section css{
+    <link rel="stylesheet" href="~/Front/css/scss.css" />
+    <link rel="stylesheet" href="~/Front/css/regis.css" />
+}
+   <div class="regis">
+        <div class="container">
+             <div class="iki">
+              <h1>Registration</h1>
+              <form method="post">
+
+                  <label for="us">Username</label>
+                  <input type="text"  asp-for="FullName" id="us"><br>
+                  <label for="qiymet">Password</label>
+                  <input type="password"  asp-for="Password" id="qiymet"><br>
+                  
+                  <label for="usas">Email</label>
+                  <input type="email"   asp-for="Email" id="usas"><br>
+                  
+                  <input type="submit" value="Registration" class="submit">
+                  <a href="@Url.Action("login" ,"Home" )" class="list">Back</a>
+
+               </form>
+             </div>
+        </div>
+  </div> 

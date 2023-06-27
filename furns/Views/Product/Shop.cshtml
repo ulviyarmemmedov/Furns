@@ -1,0 +1,147 @@
+﻿@using furns.viewmodel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model searchVM
+@section css{
+     <link rel="stylesheet" href="~/Front/css/shop.css"/>
+}
+<div class="one">
+    <div class="container">
+        <div class="row all">
+            <div class="col-md-6 left"><h2>SHOP</h2></div>
+            <div class="col-md-6 right">
+                <a href="/">HOME</a>  /
+                SHOP
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+    <div class="container">
+        <div class="row all">
+            <div class="col-md-3 left-side">
+                <h6>CATEGORY</h6>
+                <div class="line">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+                <ul>
+                    <li> <a class="@(Model.categoryid==null ?"cart-active" : "")" href="@Url.Action("shop","product", new{id=""})">ALL <span>(@Model.maxprice)</span></a></li>
+                  @foreach (var item in Model.Category)
+                    {
+                        <li> <a class="@(item.Id==Model.categoryid?"cart-active" : "")" href="@Url.Action("shop","product", new{id=@item.Id})">@item.Name</a></li>
+                    }
+                  
+                </ul>
+
+                <h6>FILTER BY</h6>
+                <div class="line second">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+
+                <h6>PRICE</h6>
+                <form action="/Product/Shop" method="get">
+                    <label for="min">MIN</label><br>
+                    <input type="number" id="min" name="min"><br>
+                    <label for="max">MAX</label> <br>
+                    <input type="number" id="max" name="max"><br>
+                    <input type="submit" value="FILTER" class="btnn">
+                </form>
+
+
+               
+
+
+            </div>
+            <div class="col-md-9 right-side">
+                <div class="main-header">
+                    <div class="left"><p>There are @Model.Products.Count() Products</p></div>
+                    <div class="right">
+
+                        <form action="/Product/Shop" method="get">
+                            <label for="sort">Sort By: </label>
+                            <select name="sort" id="sort" onchange="this.form.submit()" >
+                                <option value="1">Price,Low to High</option>
+                                <option value="2">Name,A to Z</option>
+                                <option value="3">Name,Z to A</option>
+                                <option value="4">Price,High to low</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                 @if(Model!=null && Model.Products.Count()>0)
+                {
+                    <div class="product">
+                        <div class="container">
+
+                            <div class="row bottom">
+                                @foreach (var item in Model.Products)
+                                {
+                                    <div class="col-md-4 col-sm-6 col-6 nese ">
+                                        <div class="top">
+                                            @if (item.ProductPicture[0].Picture.PictureUrl.Count() > 1)
+                                            {
+                                                <img src="@item.ProductPicture[0].Picture.PictureUrl" alt="" class="img1">
+                                                <img src="@item.ProductPicture[1].Picture.PictureUrl" alt="" class="img2">
+                                            }
+                                            else
+                                            {
+                                                <img src="@item.ProductPicture[0].Picture.PictureUrl" alt="" class="img1">
+                                            }
+                                            @if (item.IsFeatured)
+                                            {
+                                                <span>New</span>
+                                            }
+                                            @if (@item.Discount > 0)
+                                            {
+                                                <p>@item.Discount %</p>
+                                            }
+                                            <a href="" class="heart"><i class="fa-regular fa-heart"></i></a>
+                                            <a href="@Url.Action("detaling","product",new{id=@item.Id})" class="rl1"><i class="fa-solid fa-arrow-right"></i></a>
+                                            <a href="" class="rl2"><i class="fa-solid fa-arrows-rotate"></i></a>
+                                            <button nese="@item.Id" class="cart">Add To Cart</button>
+                                        </div>
+                                        <div class="botton">
+                                            <span>
+                                                @item.Name
+                                            </span>
+                                            <div class="price">
+                                                @if (item.Discount > 0)
+                                                {
+                                                    <p>@(@item.Price - ((@item.Price / 100) * @item.Discount))</p>
+                                                    <p class="p">$@item.Price</p>
+                                                }
+                                                else
+                                                {
+                                                    <p>@item.Price</p>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <p class="alert alert-danger">
+                        Product is not found</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,232 @@
+﻿@using furns.viewmodel;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProductFeaturedVM;
+@section css{
+    <link rel="stylesheet" href="~/Front/css/scss.css" />
+}
+ <div class="first">
+           <div class="container"> <div class="your-class">
+            @foreach(var item in Model.firstSlider)
+            {
+                
+                    <div class="top row">
+                        <div class="left col-md-6 col-sm-12 col-12">
+                            @if (item.IsFeatured)
+                            {
+                                <span>New Products</span>
+                            }
+                            <h2>@item.Name</h2>
+                            <p>@item.Description</p>
+                            
+                        </div>
+                        <div class="right col-md-6 col-sm-12 col-12">
+                            <img src="@item.Image" alt="">
+                        </div>
+                    </div>
+                
+            }
+
+
+          </div></div>
+
+
+        </div>
+
+        <div class="second-slider">
+            <div class="container">
+                <div class="slider">
+            @foreach(var item in Model.Categories)
+            {
+                <a href="@Url.Action("Shop","Product",new{id=item.Id})">
+                    <div class="content">
+                        <div class="top"> <img src="@item.Picture" alt=""></div>
+                        <p>@item.Name</p>
+                    </div>
+                </a>
+            }
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        <div class="product">
+            <div class="container">
+                <div class="row top">
+
+                    <div class="col-md-12 context">
+                        <h1>Our Product</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Officia provident tempora quam nisi sint assumenda.</p>
+
+                    </div>
+
+                </div>
+                <div class="middle row">
+                    <div class="col-md-12 context">
+                        <a href="">New Arrivals</a>
+                    <a href="">Best Sellers</a>
+                    <a href="">Sale Items</a>
+                    <a href="">On Sales</a>
+                    </div>
+                </div>
+                <div class="row bottom">
+                    @foreach (var item in Model.Products)
+            {
+                <div class="col-md-3 col-sm-6 col-6 nese ">
+                    <div class="top">
+                        @if (item.ProductPicture[0].Picture.PictureUrl.Count() > 1)
+                        {
+                            <img src="@item.ProductPicture[0].Picture.PictureUrl" alt="" class="img1">
+                            <img src="@item.ProductPicture[1].Picture.PictureUrl" alt="" class="img2">
+                        }
+                        else
+                        {
+                            <img src="	@item.ProductPicture[0].Picture.PictureUrl" alt="" class="img1">
+                           
+                        }
+                        @if(item.IsFeatured==true)
+                        {
+                            <span>New</span>
+                        }
+                        @if(item.Discount>0)
+                        {
+                            <p>@item.Discount</p>
+                        }
+                        <a href="" class="heart"><i class="fa-regular fa-heart"></i></a>
+                        <a href="@Url.Action("Detaling","Product",new {id=item.Id})" class="rl1"><i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="" class="rl2"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <button class="cart" nese="@item.Id">Add To Cart</button>
+                    </div>
+                    <div class="botton">
+                        <span>
+                            @item.Name
+                        </span>
+                        <div class="price">
+                            @if (item.Discount > 0)
+                            {
+                                <p>@(@item.Price-((@item.Price/100)*@item.Discount))</p>
+                                <p class="p">$@item.Price</p>
+                            }
+                            else
+                            {
+                                <p>@item.Price</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+                      
+
+                </div>
+            </div>
+        </div>
+
+       <div class="second">
+            <div class="container">
+              <div class="row all">
+                <div class="col-md-6 col-sm-6 col-12 left ">
+                    <div class="box">
+                           <img src="@Model.Sales[0].Picture" alt="">
+                           <div class="context">
+                              <h3>@Model.Sales[0].Header
+                                </h3>
+
+                        <p>@Model.Sales[0].Subheader</p>
+                           </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-12 right ">
+                    <div class="box">
+                    <img src="@Model.Sales[1].Picture" alt="">
+                           <div class="context">
+                              <h3>
+                            @Model.Sales[1].Header
+                        </h3>
+
+                        <p>@Model.Sales[1].Subheader</p>
+                           </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+       </div>
+
+       <div class="laters">
+           <div class="container">
+               <div class="text">
+                <h2>Latest News</h2>
+                <p>Torem ipsum dolor sit amet, consectetur adipisicing elitsed <br> do eiusmo tempor incididunt ut labore</p>
+
+
+               </div>
+               <div class="row alll">
+                 @foreach(var item in @Model.Newss)
+                 {
+                <div class="col-md-12 colll">
+                    <div class="box">
+                        <div class="top">
+                            <img src="@item.Picture" alt="">
+
+                        </div>
+                        <div class="bottom">
+                            <a href="" class="date">@item.Time.ToString(" dd MMMM ")</a> <br>
+                            <a href="" class="type">@item.Header</a>
+                            @if(@item.Description.Count()>50)
+                            {
+                                <p>@item.Description.Substring(0,50)</p>
+                            }
+                            else
+                            {
+                                @item.Description
+                            }
+                            <a href="@Url.Action("Detal","Single",new {id=@item.Id})" class="read">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                 
+                 }
+
+               </div>
+
+
+       </div>
+        </div>
+        <div class="follow">
+            <div class="container">
+                 <div class="follow-text">
+                    <h2>Follow Us Instagram</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, adipisci! <br> Laudantium explicabo cum et expedita!</p>
+                 </div>
+
+                 <div class="row all">
+                  @foreach (var item in Model.Follows)
+            {
+              
+                    <div class="col-md-3 nesee">
+                        <a href="">
+                            <div class="box">
+                                <img src="@item.picture" alt="">
+                                <div class="ley"></div>
+                            <a href="//@item.InstaUrl">  <i class="fa-brands fa-instagram"></i> </a>
+                            </div>
+                        </a>
+                    </div>
+              
+
+            }
+                  
+                 </div>
+            </div>
+           </div>
+
+@section Scripts{
+
+   <script src="~/Front/js/main.js" ></script>
+   
+  
+}

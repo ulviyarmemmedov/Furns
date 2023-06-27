@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Front\js\succes.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\Front\.vscode\settings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\front\css\about.css.map" />
+    <None Include="wwwroot\front\css\about.scss" />
+    <None Include="wwwroot\front\css\ceckout.css.map" />
+    <None Include="wwwroot\front\css\ceckout.scss" />
+    <None Include="wwwroot\front\css\contact.css.map" />
+    <None Include="wwwroot\front\css\contact.scss" />
+    <None Include="wwwroot\front\css\detaling.css.map" />
+    <None Include="wwwroot\front\css\detaling.scss" />
+    <None Include="wwwroot\front\css\scss.css.map" />
+    <None Include="wwwroot\front\css\scss.scss" />
+    <None Include="wwwroot\front\css\shop.css.map" />
+    <None Include="wwwroot\front\css\shop.scss" />
+    <None Include="wwwroot\front\js\about.js" />
+    <None Include="wwwroot\Front\js\succes.js" />
+    <None Include="wwwroot\front\js\cart.js" />
+    <None Include="wwwroot\front\js\ceckout.js" />
+    <None Include="wwwroot\front\js\detaling.js" />
+    <None Include="wwwroot\front\js\main.js" />
+    <None Include="wwwroot\front\slick\config.rb" />
+    <None Include="wwwroot\front\slick\fonts\slick.svg" />
+    <None Include="wwwroot\front\slick\slick-theme.css.map" />
+    <None Include="wwwroot\front\slick\slick-theme.less" />
+    <None Include="wwwroot\front\slick\slick-theme.scss" />
+    <None Include="wwwroot\front\slick\slick.css.map" />
+    <None Include="wwwroot\front\slick\slick.js" />
+    <None Include="wwwroot\front\slick\slick.less" />
+    <None Include="wwwroot\front\slick\slick.min.js" />
+    <None Include="wwwroot\front\slick\slick.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+	  <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
+</Project>

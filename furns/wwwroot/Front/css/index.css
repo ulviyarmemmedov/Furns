@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.allll {
+  height: 100vh;
+}
+.allll .parttt {
+  margin: 0 auto;
+  width: 70%;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 19px 38px rgba(235, 42, 42, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.allll .parttt a {
+  padding: 12px 40px;
+  border-radius: 5px;
+}
+.allll .parttt .blokkk {
+  background-color: blue;
+  color: white;
+  transition: 0.4s;
+}
+.allll .parttt .blokkk:hover {
+  text-decoration: none;
+  background-color: rgb(59, 59, 255);
+}
+.allll .parttt .menzilll {
+  background-color: red;
+  color: white;
+  transition: 0.4s;
+}
+.allll .parttt .menzilll:hover {
+  text-decoration: none;
+  background-color: rgb(245, 76, 76);
+}
+.allll .parttt .muqavilell {
+  background-color: green;
+  color: white;
+  transition: 0.4s;
+}
+.allll .parttt .muqavilell:hover {
+  text-decoration: none;
+  background-color: rgb(5, 175, 5);
+}/*# sourceMappingURL=index.css.map */

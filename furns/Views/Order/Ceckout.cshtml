@@ -1,0 +1,159 @@
+﻿@using Entities
+@section css{
+    <link rel="stylesheet" href="~/Front/css/ceckout.css" />
+
+}
+@{
+     decimal total;
+    decimal price;
+}
+@if (Model != null)
+{
+    @using furns.viewmodel
+
+
+@model CartVM
+    <div class="one">
+        <div class="container">
+            <div class="row all">
+                <div class="col-md-6 left"><h2>Checkout</h2></div>
+                <div class="col-md-6 right">
+                    <a href="/">HOME</a>  /
+                    Checkout
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="middlee">
+        <div class="container">
+            <div class="row all">
+                <div class="col-md-8 left">
+                    <h1>Billing Details</h1>
+                    <form asp-action="ceckout" method="post">
+                       
+                                <label for="name">FullName</label><br>
+                        <input type="text" id="name" asp-for="order.CustomerName" style="padding:20px;width: 97.5%;
+    margin-bottom: 20px;"><br>
+                           <input type="hidden" asp-for="order.TotalAmmount" value="@Model.Products.Sum(pro=>Model.Propid.Where(x=>x==pro.Id).Count()*pro.Price)"/>
+                        <label for="comp">Company Name</label><br>
+                        <input type="text" id="comp" asp-for="order.TransactionId"><br>
+                        <label for="sel">Country</label><br>
+                        <select name="" id="sel" asp-for="order.CustomerAddress">
+                            <br>
+                            <option value="aze">aze</option>
+                            <option value="rus">rus</option>
+                            <option value="turk">turk</option>
+                        </select><br>
+                        <label for="home">Full Home Address</label><br>
+                        <input type="text" id="home" asp-for="order.CustomerAddress">
+                        <br>
+                        <label for="to">Town / City</label><br>
+                        <input type="text" id="to" asp-for="order.CustomerAddress"><br>
+
+                        <div class="first">
+                            <div class="left">
+                                <label for="ph">Phone</label><br>
+                                <input type="tel" id="ph" asp-for="order.CustomerPhone"><br>
+                            </div>
+                            <div class="right">
+                                <label for="em">Email Address</label><br>
+                                <input type="email" id="em" asp-for="order.CustomerEmail"><br>
+                            </div>
+
+                        </div>
+                        <input type="submit" name="" class="send" id="btnn" value="PLACE ORDER">
+                    </form>
+                </div>
+                <div class="col-md-4 right">
+                    <h1>Your order</h1>
+                    <div class="alll">
+                        <div class="part">
+                            <h6>Product</h6>
+                            <h6>Total</h6>
+                        </div>
+                        <div class="line"></div>
+                        @foreach (var item in Model.Products)
+                        {
+
+                            var quantity = Model.Propid.Where(x => x == item.Id).Count();
+
+                            <div class="pro">
+                                <div class="left">
+                                    <ul>
+                                        <li>@item.Name @quantity X</li>
+
+                                    </ul>
+
+                                </div>
+                                <a href="@Url.Action("ceckout","order",new{id=@item.Id})"><i class="fa-solid fa-minus"></i></a>
+                                <div class="right">
+                                    <ul>
+                                        <li>$
+                                            @if(item.Discount>0)
+                                            {
+                                                
+                                               @((@item.Price-(@item.Price / 100 * @item.Discount))*quantity);
+                                            }
+                                            else
+                                            {
+                                               @( (@item.Price)*quantity);
+                                            }
+                                        </li>
+                                        
+                                            
+                                        
+
+                                    </ul>
+                                   
+                                </div>
+                               
+                            </div>
+
+                        }
+                        <div class="line"></div>
+                        <div class="part">
+                            <h6>Shipping</h6>
+                            <h6>Free shipping</h6>
+                        </div>
+                        <div class="line"></div>
+                        <div class="part">
+                            <h6>Total</h6>
+                            <p>$@Model.Products.Sum(pro=>Model.Propid.Where(x=>x==pro.Id).Count()*pro.Price)</p>
+                        </div>
+                        <div class="line"></div>
+                        <button class="accordion"><b>Direct bank transfer</b></button>
+                        <div class="panel">
+                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                        </div>
+
+                        <button class="accordion"><b>Check payments</b></button>
+                        <div class="panel">
+                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                        </div>
+
+                        <button class="accordion"><b>Cash on delivery</b></button>
+                        <div class="panel">
+                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts{
+
+    <script src="~/Front/js/ceckout.js"></script>
+    <script src="~/Front/js/succes.js"></script>
+    <script src="~/Front/js/cart.js"></script>
+}
+}
+
+else
+{
+  
+    <p class="alert alert-danger">There is not Product</p>
+}
+

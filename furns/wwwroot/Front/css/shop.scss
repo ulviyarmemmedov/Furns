@@ -1,0 +1,625 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+ background-color: black;
+ 
+        .top{
+              display: flex;
+              align-items: center;
+              padding: 11px 0;
+             
+                  .left{
+
+                         p{
+                            color: #FF7004;
+                            margin: 0;
+                         }
+                  }
+
+                .right{
+                    display: flex;
+                    justify-content: right;
+                    
+                   
+.dropbtn {
+   
+    
+    background-color: black;
+    font-size: 16px;
+    border: none;
+    color: wheat;
+    padding-right:11px ;
+    transition: 0.4s;
+    z-index: 88455454;
+  }
+ 
+  .first{
+    
+    border-right: 1px solid wheat;
+ }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    
+    
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
+    
+  }
+  
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 68678;
+  }
+  
+  /* Change color of dropdown links on hover */
+
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;
+    z-index: 32543;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {color: #FF7004;
+                               }   
+
+                }
+        }   
+
+}
+
+.header2{
+
+        .middle{
+               padding: 30px 0;
+                display: flex;
+                align-items: center;
+                   .right{
+                         display: flex;
+                         justify-content: right;
+                         
+                         i{
+                            margin: 0 20px;
+                            font-size: 1.5rem;
+                            transition: 0.4s;
+                            &:hover{
+                                  color: #FF7004;
+                                  cursor: pointer;
+                            }
+                         }
+                         .line{
+                                 width: 2px;
+                                 height: 27px;
+                                 border: 1px solid #474747;
+                         }
+                         .shop{
+
+                                 position: relative;
+
+                                 p{
+                                    position: absolute;
+                                    left: 34px;
+                                    top: 0;
+                                    background-color: #FF7004;
+                                    padding: 0 6px;
+                                    border-radius: 50%;
+                                    font-size: 10px;
+                                    color: white;
+                                 }
+                         }
+                   }
+        }
+}
+.header3{
+   background-color: black;
+       .bottom{
+                   
+              .colll{
+                       padding: 15px 0;
+                      display: flex;
+                      justify-content: center; 
+                      a{
+
+                           font-size: 1rem;
+                           text-decoration: none;
+                           margin: 0 10px;
+                           color: white;
+                           transition: 0.4s;
+                           &:hover{
+                                color: #FF7004;
+                           }
+                      }   
+              }
+       }
+}
+.telhd{
+       display: none;
+    .tel{
+           padding: 30px 0;
+            display: flex;
+            align-items: center;
+               .right{
+                     display: flex;
+                     justify-content: right;
+                     
+                     i{
+                        margin: 0 20px;
+                        font-size: 1.5rem;
+                        transition: 0.4s;
+                        &:hover{
+                              color: #FF7004;
+                              cursor: pointer;
+                        }
+                     }
+                     .line{
+                             width: 2px;
+                             height: 27px;
+                             border: 1px solid #474747;
+                     }
+                     .shop{
+
+                             position: relative;
+
+                             p{
+                                position: absolute;
+                                left: 34px;
+                                top: 0;
+                                background-color: #FF7004;
+                                padding: 0 6px;
+                                border-radius: 50%;
+                                font-size: 10px;
+                                color: white;
+                             }
+                     }
+               }
+    }
+}
+.one{
+    padding: 5rem 0;
+    background-color: #F4F5F7;
+       .all{
+           .right{
+               text-align: right;   
+               a{
+                transition: .4s;
+                  &:hover{
+                     color: #FF7004;
+                  }
+               }    
+           }
+       }
+}
+
+.main {
+    padding: 5rem 0;
+
+    .all {
+        .left-side {
+            .line {
+                margin: 5px 0;
+                display: flex;
+                justify-content: space-between;
+
+                .line1 {
+                    width: 25%;
+                    height: 1px;
+                    background-color: orange;
+                    border: 1px solid orange;
+                }
+
+                .line2 {
+                    width: 75%;
+                    height: 1px;
+                    background-color: grey;
+                    border: 1px solid grey;
+                    opacity: 0.5;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin: 5px 0;
+
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: #FF7004;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .second {
+                margin: 10px 0;
+            }
+
+            form {
+
+                input {
+                    width: 50%;
+                    border-radius: 5px;
+                    padding-left: 5px;
+                }
+
+                .btnn {
+                    margin-top: 20px;
+                    width: 100%;
+                    background-color: #FF7004;
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    padding: 10px 0;
+                    transition: .4s;
+                    margin-bottom: 30px;
+
+                    &:hover {
+                        background-color: #fa9b52;
+                    }
+                }
+            }
+
+            .colors {
+
+                li {
+
+
+                    .alllll {
+                        display: flex;
+                        align-items: center;
+
+                        .color {
+                            width: 15px;
+                            height: 15px;
+                            background-color:grey;
+                            border:1px solid grey;
+                            border-radius: 3px;
+                            margin-right: 5px;
+                        }
+
+                        a {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-side {
+
+            .main-header {
+                background-color: #EBEBEB;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 10px 10px 30px;
+
+                .left {
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                .right {
+                    form {
+                        label {
+                            margin: 0;
+                        }
+
+                        select {
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            .product {
+
+                .bottom {
+                    margin: 3rem 0;
+
+                    .nese {
+
+                        .top {
+                            position: relative;
+                            margin-bottom: 20px;
+
+                            span {
+                                position: absolute;
+                                left: 20px;
+                                top: 30px;
+                                background-color: #007A58;
+                                padding: 0px 7px;
+                                border-radius: 2px;
+                                color: white;
+                            }
+
+                            .heart {
+                                right: 20px;
+                                top: 20px;
+                                position: absolute;
+                                color: black;
+                                background-color: white;
+                                padding: 10px 15px;
+                                border-radius: 50%;
+                                transition: 0.4s;
+
+                                &:hover {
+                                    background-color: #FF7004;
+                                    color: white;
+                                }
+                            }
+
+                            .rl1 {
+                                right: 20px;
+                                top: 120px;
+                                position: absolute;
+                                color: black;
+                                background-color: white;
+                                padding: 10px 15px;
+                                border-radius: 50%;
+                                opacity: 0;
+                                transition: 0.7s;
+
+                                &:hover {
+                                    background-color: #FF7004;
+                                    color: white;
+                                }
+                            }
+
+                            .rl2 {
+                                right: 20px;
+                                top: 170px;
+                                position: absolute;
+                                opacity: 0;
+                                transition: 0.7s;
+                                color: black;
+                                background-color: white;
+                                padding: 10px 15px;
+                                border-radius: 50%;
+
+                                &:hover {
+                                    background-color: #FF7004;
+                                    color: white;
+                                }
+                            }
+
+                            .cart {
+                                position: absolute;
+                                opacity: 0;
+                                left: 20px;
+                                bottom: 0px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                padding: 3px 10px;
+                                background-color: white;
+                                transition: 0.7s;
+
+                                &:hover {
+                                    text-decoration: none;
+                                    color: #FF7004;
+                                }
+                            }
+
+                            p {
+                                position: absolute;
+                                left: 20px;
+                                top: 60px;
+                                padding: 0px 4px;
+                                background-color: #FF7004;
+                                color: white;
+                                border-radius: 3px;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+
+                            .img2 {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                opacity: 0;
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+
+                                .img2 {
+                                    opacity: 1;
+                                }
+
+                                .rl1 {
+                                    top: 70px;
+                                    opacity: 1;
+                                }
+
+                                .rl2 {
+                                    top: 120px;
+                                    opacity: 1;
+                                }
+
+                                .cart {
+                                    bottom: 20px;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .botton {
+                            text-align: center;
+
+                            .price {
+                                margin-top: 20px;
+                                display: flex;
+                                justify-content: space-around;
+
+                                .p {
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.first-last{
+    background-color:  #212529;
+    padding: 6rem 0;
+    color: white;
+          .all{
+                .left{
+                      i{
+                           font-size: 1rem;
+                           
+                           padding: 5px 5px;
+                           transition: 0.4s;
+                           border-radius: 50%;
+                           cursor: pointer;
+                           &:hover{
+
+                            background-color: #FF7004;
+                           }
+                      }
+                }
+                .middle{
+                         ul{
+                            li{
+                                 list-style-type: none;
+                                 display: inline-block;
+                                 transition: 0.6s;
+                                 a{
+                                    color: white;
+                                    transition: .7s;
+                                    &:hover{
+                                         text-decoration: none;
+                                          color: #FF7004;
+                                          
+                                         
+                                    }
+                                 }
+                                 &:hover{
+                                   
+                                        transform: translate(20px);
+                                      
+                                 }
+                            }
+                         }
+                }
+                .right{
+                     .email{
+                             padding: 10px 20px;
+                             background-color: transparent;
+                              border: 1px solid #007A58;
+                              outline: none;
+                              transition: 0.2s;
+                              &:focus{
+                                    border: 1px solid #FF7004;
+                              }
+                              
+                     }
+                     .btnn{
+                             margin-top: 20px;
+                             padding: 15px 35px;
+                             background-color: #FF7004;
+                             color: white;
+                             border: none;
+                             transition: 0.4s;
+                             &:hover{
+                                  background-color: #ff9341;
+                             }
+                     }
+                }
+          }
+}
+.last{
+  padding: 20px 0;
+background-color: #2A2A2A;
+   .all{
+        .left{ 
+          p{
+            color: white;
+            margin: 0;
+              i{
+                color: red;
+              }
+              a{
+                color: white;
+                transition: 0.4s;
+                 &:hover{
+                      text-decoration: none;
+                      color: #FF7004;
+                 }
+              }
+          }
+           
+        }
+        .right{
+              text-align: right;
+        }
+   }
+}
+
+
+
